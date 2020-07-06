@@ -1,6 +1,6 @@
 package br.com.gotn.devopscourse;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,15 +21,15 @@ class DevOpsCourseProjectApplicationTests {
 	private static MockMvc mockMvc;
 
 	@Autowired
-	private static WebApplicationContext context;
+	private WebApplicationContext context;
 
-	@BeforeAll
-	static void setUp() throws Exception {
+	@BeforeEach
+	void setup() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
 	}
 
 	@Test
-	public void welcomeTest() throws Exception {
+	void welcomeTest() throws Exception {
 		mockMvc.perform(get("/"))
 				.andExpect(status().isOk())
 				.andExpect(model().attribute("course", containsString("DevOps")));
