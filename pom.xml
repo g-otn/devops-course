@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.gotn</groupId>
 	<artifactId>devopscourse</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>DevOps Course Project</name>
 	<description>Demo Spring Boot project to test DevOps tools</description>
